@@ -51,6 +51,7 @@
     <div class="flex items-center gap-6">
       <nav class="hidden md:flex items-center gap-6 text-sm">
         <a href="#products" class="hover:underline">Products</a>
+        <a href="#about" class="hover:underline">About Us</a>
         <a href="#industries" class="hover:underline">Industries</a>
         <a href="#quote" class="hover:underline">Instant Quote</a>
         <a href="#distributors" class="hover:underline">Distributors</a>
@@ -179,6 +180,67 @@
 </div>
 
 </section>
+<!-- 🌿 About Us Section -->
+<!-- 🌿 About Us Section -->
+<section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-20">
+  <!-- Title -->
+  <h2 class="text-3xl font-bold text-center mb-10">
+    <span id="about-title1" class="text-[#163b5d]">About</span>
+    <span id="about-title2" class="text-[#d3262c]"> Us</span>
+  </h2>
+
+  <!-- Content Wrapper -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <!-- 🖼️ Logo card -->
+    <div class="flex md:justify-start">
+  <div class="bg-white rounded-2xl shadow-lg w-full md:w-[90%] flex items-center justify-center min-h-[320px] sm:min-h-[360px] overflow-hidden">
+    <img src="logofooter.png"
+         alt="RightChoiceVN Logo"
+         class="h-[85%] sm:h-[90%] w-auto object-contain hover:scale-105 transition-transform duration-300" />
+  </div>
+</div>
+
+
+    <!-- 📄 Text content -->
+    <div class="text-gray-700 text-sm sm:text-base leading-relaxed text-justify">
+      <p id="about-desc1">
+        RightChoiceVN is a Vietnam-based resin manufacturer specializing in high-performance photopolymer materials for 3D printing.
+        We were founded with a simple goal: to give makers, service bureaus, and industrial users across Vietnam access to world-class resin — produced locally, delivered fast, and priced fairly.
+      </p>
+      <p id="about-desc2" class="mt-4">
+        With in-house R&D, strict batch-level QC, and close collaboration with top print labs, we continuously refine our formulas to meet diverse applications — from dental models and engineering prototypes to jewelry casting and education.
+      </p>
+      <p id="about-desc3" class="mt-4">
+        Our mission is to empower Vietnam’s 3D printing ecosystem by providing dependable, transparent, and scalable material solutions.
+        We believe that speed, quality, and local trust should go hand in hand.
+      </p>
+      <p id="about-desc4" class="mt-4 font-semibold">
+        RightChoiceVN — Where Local Innovation Meets Global Standards.
+      </p>
+    </div>
+  </div>
+
+  <!-- Cards (Local/Global/R&D) -->
+  <div class="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+    <div class="bg-white rounded-2xl shadow p-6">
+      <i data-lucide="factory" class="w-8 h-8 mx-auto text-[#163b5d] mb-2"></i>
+      <h4 id="about-card1-title" class="font-semibold text-[#163b5d]">Local Production</h4>
+      <p id="about-card1-text" class="text-sm text-gray-600 mt-1">Made in Vietnam with strict QC standards.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow p-6">
+      <i data-lucide="globe-2" class="w-8 h-8 mx-auto text-[#163b5d] mb-2"></i>
+      <h4 id="about-card2-title" class="font-semibold text-[#163b5d]">Global Reach</h4>
+      <p id="about-card2-text" class="text-sm text-gray-600 mt-1">Supplying across APAC and expanding globally.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow p-6">
+      <i data-lucide="flask-round" class="w-8 h-8 mx-auto text-[#163b5d] mb-2"></i>
+      <h4 id="about-card3-title" class="font-semibold text-[#163b5d]">Innovation & R&D</h4>
+      <p id="about-card3-text" class="text-sm text-gray-600 mt-1">Continuous development of new resin formulas.</p>
+    </div>
+  </div>
+</section>
+
+
 
 
   <!-- Products -->
@@ -494,10 +556,6 @@ modal.addEventListener("click", e => {
  <!-- 📨 Instant Quote -->
 <section id="quote" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
 
-  <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[85vh] overflow-y-auto p-5 sm:p-8 relative animate-fadeIn">
-    <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl leading-none">&times;</button>
-    <div id="modalContent" class="text-gray-800"></div>
-  </div>
     <h2 class="text-3xl font-bold mb-2">
       <span class="text-[#163b5d]">Instant</span>
       <span class="text-[#d3262c]"> Quote</span>
@@ -550,10 +608,6 @@ modal.addEventListener("click", e => {
 
 <!-- 🧾 Distributors -->
 <section id="distributors" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-  <div class="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[85vh] overflow-y-auto p-5 sm:p-8 relative animate-fadeIn">
-    <button id="closeModal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl leading-none">&times;</button>
-    <div id="modalContent" class="text-gray-800"></div>
-  </div>
     <h2 class="text-3xl font-bold mb-2">
       <span class="text-[#163b5d]">Distributor</span>
       <span class="text-[#d3262c]"> Application</span>
@@ -674,23 +728,13 @@ modal.addEventListener("click", e => {
   lucide.createIcons();
 </script>
 <script>
-  const logoStrip = document.getElementById('logo-strip');
-  const afterText = document.getElementById('after-text');
-
-  logoStrip.addEventListener('animationend', () => {
-    logoStrip.classList.add('hidden');
-    afterText.classList.remove('hidden');
-    afterText.classList.add('opacity-0', 'transition', 'duration-700');
-    setTimeout(() => afterText.classList.remove('opacity-0'), 50);
-  });
-</script>
-<script>
 (() => {
   // ===== TRANSLATIONS =====
   const T = {
     en: {
       nav: {
         products: "Products",
+        about: "About Us",
         industries: "Industries",
         quote: "Instant Quote",
         distributors: "Distributors",
@@ -772,6 +816,7 @@ modal.addEventListener("click", e => {
     vi: {
       nav: {
         products: "Sản phẩm",
+        about: "Giới thiệu",
         industries: "Ngành",
         quote: "Báo giá nhanh",
         distributors: "Nhà phân phối",
@@ -861,6 +906,45 @@ T.infobox = {
     vi: "* Thí điểm tại TP.HCM & Hà Nội. Liên hệ để hỗ trợ khu vực khác."
   }
 };
+
+// ===== ABOUT SECTION =====
+T.about = {
+
+  title1: { en: "About", vi: "Về" },
+  title2: { en: "Us", vi: "chúng tôi" },
+  desc1: {
+    en: "RightChoiceVN is a Vietnam-based resin manufacturer specializing in high-performance photopolymer materials for 3D printing. We were founded with a simple goal: to give makers, service bureaus, and industrial users across Vietnam access to world-class resin — produced locally, delivered fast, and priced fairly.",
+    vi: "RightChoiceVN là nhà sản xuất nhựa resin tại Việt Nam, chuyên về vật liệu quang trùng hợp hiệu năng cao cho in 3D. Chúng tôi được thành lập với mục tiêu đơn giản: mang đến cho các nhà chế tạo, xưởng dịch vụ và doanh nghiệp trong nước cơ hội tiếp cận nhựa chất lượng quốc tế — sản xuất nội địa, giao nhanh, giá hợp lý."
+  },
+  desc2: {
+    en: "With in-house R&D, strict batch-level QC, and close collaboration with top print labs, we continuously refine our formulas to meet diverse applications — from dental models and engineering prototypes to jewelry casting and education.",
+    vi: "Với đội ngũ R&D nội bộ, quy trình kiểm soát chất lượng từng lô và hợp tác chặt chẽ với các phòng in hàng đầu, chúng tôi liên tục tối ưu công thức để đáp ứng nhiều lĩnh vực ứng dụng — từ mô hình nha khoa, nguyên mẫu kỹ thuật đến đúc trang sức và giáo dục."
+  },
+  desc3: {
+    en: "Our mission is to empower Vietnam’s 3D printing ecosystem by providing dependable, transparent, and scalable material solutions. We believe that speed, quality, and local trust should go hand in hand.",
+    vi: "Sứ mệnh của chúng tôi là thúc đẩy hệ sinh thái in 3D Việt Nam bằng các giải pháp vật liệu đáng tin cậy, minh bạch và có khả năng mở rộng. Chúng tôi tin rằng tốc độ, chất lượng và niềm tin địa phương phải song hành."
+  },
+  desc4: {
+    en: "RightChoiceVN — Where Local Innovation Meets Global Standards.",
+    vi: "RightChoiceVN — Nơi đổi mới nội địa gặp gỡ tiêu chuẩn toàn cầu."
+  },
+  cards: {
+    1: {
+      title: { en: "Local Production", vi: "Sản xuất nội địa" },
+      text: { en: "Made in Vietnam with strict QC standards.", vi: "Sản xuất tại Việt Nam với tiêu chuẩn QC nghiêm ngặt." }
+    },
+    2: {
+      title: { en: "Global Reach", vi: "Phủ sóng toàn cầu" },
+      text: { en: "Supplying across APAC and expanding globally.", vi: "Phân phối khắp khu vực APAC và mở rộng toàn cầu." }
+    },
+    3: {
+      title: { en: "Innovation & R&D", vi: "Đổi mới & R&D" },
+      text: { en: "Continuous development of new resin formulas.", vi: "Liên tục phát triển công thức nhựa mới." }
+    }
+  
+}
+};
+
 
 T.industriesCards = {
   dental: {
@@ -1169,6 +1253,21 @@ const setInd = (key) => {
   }
 };
 ['dental','engineering','education','architecture','manufacturing','creative'].forEach(setInd);
+// ===== About Us =====
+const AB = T.about;
+const setText = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+setText("about-title1", AB.title1[lang]);
+setText("about-title2", AB.title2[lang]);
+setText("about-desc1", AB.desc1[lang]);
+setText("about-desc2", AB.desc2[lang]);
+setText("about-desc3", AB.desc3[lang]);
+setText("about-desc4", AB.desc4[lang]);
+setText("about-card1-title", AB.cards[1].title[lang]);
+setText("about-card1-text", AB.cards[1].text[lang]);
+setText("about-card2-title", AB.cards[2].title[lang]);
+setText("about-card2-text", AB.cards[2].text[lang]);
+setText("about-card3-title", AB.cards[3].title[lang]);
+setText("about-card3-text", AB.cards[3].text[lang]);
 
     // ===== Lang Toggle label =====
     const langBtn = $('#langToggle');
